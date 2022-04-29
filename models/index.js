@@ -24,6 +24,7 @@ Product.belongsToMany(Tag, {
     unique: false
   },
   as: 'products_tagged',
+  foreignKey: 'product_id',
   onDelete: 'cascade',
 })
 
@@ -34,6 +35,7 @@ Tag.belongsToMany(Product, {
     unique: false
   },
   as: 'tagged_products',
+  foreignKey: 'tag_id',
   onDelete: 'cascade',
 })
 
